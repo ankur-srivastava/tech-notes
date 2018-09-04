@@ -1,0 +1,22 @@
+Node.js came in 2009. 
+
+It took V8, Google Chrome’s powerful JavaScript engine (used for the browser) and enabled it to run on servers.
+
+Advantages
+
+	V8 JavaScript engine is fast.
+	An asynchronous coding style is encouraged.
+	Javascript is very popular. So lot of libraries are available.
+	Code between browser and server can be shared. It's consistent.
+	
+Express adds a layer to Node making it easier to use. Node.js APIs can be confusing to use. Express makes it convenient.
+
+With Node we can use Javascript to create web applications.
+
+So what makes the engine fast?
+It's ability to handle concurrency. Other runtimes don’t work this way by default. Like Ruby on Rails. It can process only one request at a time.
+
+Node.js can squeeze a lot of performance out of one CPU core, but it doesn’t excel with multiple cores.
+
+More than performance the main reason seems to be using same language across. It let's you jump back and forth between front end and backe end. An example is the MEAN stack.
+The reason to choose Mongo is also pretty much the same. Javascript.

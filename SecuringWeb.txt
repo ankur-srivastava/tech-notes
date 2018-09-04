@@ -1,0 +1,131 @@
+Securing Web Applications
+
+Let's start with Kevin David Mitnick. Why him?
+
+He is known as the Godfather of Hacking.
+
+	Kevin David Mitnick is an American computer security consultant, author, and hacker, best known for his high-profile 1995 arrest and later five years in prison for 	various computer and communications-related crimes.
+	
+	At age 13 he hacked the Los Angeles bus system. He was able to ride any bus in the greater LA area
+	
+	How he did that?
+	
+	Using unused transfer slips he found in a dumpster next to the bus company garage. Any lessons here?
+	
+	Social engineering later became his primary method of obtaining information, including usernames and passwords and modem phone numbers.
+	
+
+	In NPR words "Mitnick manages to make breaking computer code sound as action-packed as robbing a bank."
+	
+	Ok, but I still dint get why Kevin?
+	
+	Kevin wrote "Ghost in the Wires". What makes this book special is the fact that it made the authorities to rethink the way they pursued him, and forced companies to 	rethink the way they protect their most sensitive information.
+	
+	It's not very difficult to hack into systems, be it banks, hospitals, e-commerce sites etc., to get sensitive data. In fact these days it's happening quite frequently.
+	
+	Wired published this article recently : "An Undiscovered Facebook Bug Made Me Think I Was Hacked"
+	
+	If FB is struggling with security issues then how safe are other sites ??  
+	
+	
+	
+	Securing applications is a continuous process. There is no magic pill but an effort is needed from everyone in an organization to safeguard data. Not just coders.
+	
+	Let's talk about OWASP. How many of you have heard about OWASP?
+	
+	The Open Web Application Security Project (OWASP), an online community, produces freely-available articles, methodologies, documentation, tools, and technologies in the 	field of web application security. 
+	
+	Some 18 years back Mark Curphey started OWASP. It's a non-profit organization.
+	
+	OWASP publishes Top Ten. It is regularly updated and it aims to raise awareness about application security by identifying some of the most critical risks facing 	organizations.
+	
+	They also publish development and testing guides, which provide practical guidance and includes J2EE, ASP.NET, and PHP code samples. 
+	
+	
+	Let's look at OWASP Top 10 Most Critical Web Application Security Risks which was published in 2017.
+	
+	If you have time visit : https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf
+	
+	"The harm that is caused may be of no consequence, or it may put you out of business." 
+	
+	 Together, these factors determine your overall risk.
+	 
+	 At the very minimum a Business should make sure that these 10 are addressed.
+	 
+	 Some of the potential threats include 
+	 	Injection : Injection flaws, such as SQL, NoSQL, OS, and LDAP injection 
+		Broken Authentication : Application functions related to authentication and session management are often implemented incorrectly.
+		Sensitive Data Exposure : Many web applications and APIs do not properly protect sensitive data, such as financial and healthcare.
+		Security Misconfiguration : Security misconfiguration is the most commonly seen issue. This is commonly a result of insecure default configurations, incomplete or 									ad hoc configurations, open cloud storage, misconfigured HTTP headers, and verbose error messages containing sensitive information. 									Not only operating systems, frameworks, libraries, and applications need to be securely configured, but they must be patched and 									upgraded in a timely fashion.
+		
+	So how do we protect our Application?
+	
+	Follow OWASP guidelines.
+	
+	Let's see how to prevent Security Misconfiguration.
+	 
+		Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be 		automated to minimize the effort required to setup a new secure environment.
+		A minimal platform without any unnecessary features, components, documentation, and samples. Remove or do not install unused features and frameworks.
+		A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patch management process In particular, review 		cloud storage permissions (e.g. S3 bucket permissions).
+		Sending security directives to clients, e.g. Security Headers.
+		An automated process to verify the effectiveness of the configurations and settings in all environments.
+		
+		
+	To conclude	
+	
+	1. Developers
+	
+		Question how a new feature or change can impact security of the application. 
+		
+		Spend time to identify security risks. We can't leave everything to the security folks.
+		
+		Understand OWASP.
+		
+		Do not blindly install a package. In 2015 rimrafall package was published to npm. And was taken off soon after it's intent was discovered. But it did cause damage.
+		
+		Malicious modules with similar names. 
+		
+			socket.io : 3,500,000 installs
+			socketio : 2,000 installs
+			
+			uglify-js : 11,000,000
+			uglifyjs : 50,000
+			
+		Check how your programming language or framework addresses OWASP guidelines.
+		
+		For instance if you are using Node then following modules can be help
+		
+		 1. Helmet or Lusca for secure HTTP headers   
+	
+			"Helmet helps you secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help!"
+		
+				const express = require('express')
+				const helmet = require('helmet')
+ 
+				const app = express()
+ 
+				app.use(helmet())
+ 
+				// ...
+				
+		2. Use validator.js for regex
+		3. Dependencies check with snyk and nsp
+			
+			Snyk helps you find, fix and monitor known vulnerabilities in Node.js npm, Ruby and Java dependencies, both on an ad hoc basis and as part of your CI (Build) 			system.
+			
+			
+		Lastly do not copy paste code from internet blindly.
+		
+	
+	2. For Business : Goes without saying that a business needs to invest in the right tools and stay alert to the changing trends. 
+					  Engage with the security agencies. 
+					  Invite speakers (like Kevin) to share ideas.
+					  Question employees on what steps they are taking to prevent such attacks.
+					  
+    Thank you.
+	
+ 
+		
+	  	 
+		
+	
