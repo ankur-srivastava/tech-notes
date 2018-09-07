@@ -20,3 +20,35 @@ Node.js can squeeze a lot of performance out of one CPU core, but it doesn’t e
 
 More than performance the main reason seems to be using same language across. It let's you jump back and forth between front end and backe end. An example is the MEAN stack.
 The reason to choose Mongo is also pretty much the same. Javascript.
+
+Node.js’s HTTP server is powerful, but it’s missing a lot of features that you might want if you were building a real application.
+
+What Express adds to Node?
+
+	It abstracts away complexity by providing conveniences. Like sending a JPEG file is pretty complex in Node but Express reduces it to one line.
+	Using Express we can have multiple request handlers which makes code modular. Some functions are executed for each request and some are specific to a request. Request 	handler functions take two arguments: the request and the response. Express makes handling request and response convenient.
+	
+You can build many different kind of applications using Express. But you get less out of the box. It doesn’t care how you structure your apps, so two developers might make different decisions. 
+
+Core Parts
+
+Middleware: When a request comes in then instead of having a monolithic codebase to handle it we have smaller components. These are called Middleware. Like to validate data we can add a function or a module. Or to log requests we can add a logger.
+
+One of the advantages of middleware is that it’s relatively standardized, which means that lots of people have developed middleware for Express. Most of the functionalities needed have been taken care of.
+
+Routing: Based on the request Routing forwards it to appropriate handler.
+
+Subapplications: Break the application into sub-applications. We can have different routers for each sub-application.
+
+Utilities: Express comes with functions that can be helpful while building application.  
+
+Other Popular Frameworks
+
+Hapi.js is a mature framework and is the biggest competitor to Express. Meteor is another popular full stack framework.
+Express is unopinionated about how you build your applications but Meteor has a strict structure. Express deals only with the HTTP server layer; Meteor is full-stack, running code on both client and server.
+
+Folks at PayPal created Kraken; although Kraken is technically just Express middleware, it sets up a lot of your application, from security defaults to bundled middleware. 
+
+Checkout Sails.js.  is another up-and-coming framework built atop Express that adds databases, WebSocket integration, API generators, an asset pipeline, and more. Both of these frameworks are more opinionated than Express by design. 
+
+Connect is another framework that's focussed on the middleware layer.
