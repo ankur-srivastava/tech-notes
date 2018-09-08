@@ -52,3 +52,45 @@ Folks at PayPal created Kraken; although Kraken is technically just Express midd
 Checkout Sails.js.  is another up-and-coming framework built atop Express that adds databases, WebSocket integration, API generators, an asset pipeline, and more. Both of these frameworks are more opinionated than Express by design. 
 
 Connect is another framework that's focussed on the middleware layer.
+
+Express let's you choose any templating language and any database. There is also a security aspect.
+
+
+Node
+
+The url module in Node parses a URL and extracts useful information like domain or path. Similarly we have querystring:
+
+	const querystring = require('querystring');
+	const testURL = 					'https://www.ted.com/playlists/440/how_the_brain_takes_care_of_it?utm_source=Science+worth+knowing&utm_campaign=6097d0ab7e-Science+worth+knowing_12-21-17						_COPY_01&utm_medium=email&utm_term=0_83c20124eb-6097d0ab7e-297668897';
+	const queryParamName = 'utm_campaign';
+
+	const getQueryParam = (URL, queryParamName) => {
+	    const parsedURL = querystring.parse(testURL);
+	    const queryParamValue = parsedURL[queryParamName];
+	    console.log(`For Query Param ${queryParamName} the Value is ${queryParamValue}`);
+	    return queryParamValue;
+	};
+
+	//Example
+	getQueryParam(testURL, queryParamName);
+
+	module.exports = {
+	    getQueryParam,
+	};
+	
+Publishing a simple package to npm : http://evanhahn.com/make-an-npm-baby/
+
+
+Node’s Asynchronous Model
+
+Let's take an example - when a Node application gets a request to read a file it calls the appropriate module to handle this and then continues with next request. Once the file has been read a callback happens, in the example below mycallback function is called.
+
+	function mycallback(){
+		//
+	}
+	
+	fs.readfile('myfile.txt', options, mycallback)
+	
+There’s a fantastic video on how callbacks and the event loop work in JavaScript : https://www.youtube.com/watch?v=8aGhZQkoFbQ
+	
+The HTTP Module
