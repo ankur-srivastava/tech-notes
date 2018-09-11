@@ -1,0 +1,26 @@
+To apply the statistical concepts, unstructured raw data must be processed and manipulated into a structured form—as it might emerge from a relational database—or be collected for a study.
+
+Data Types
+
+	Continuous : Data can take any value in the interval. Can be float.
+	Discrete : Data can take only INT values. Can be integer.
+	Categorical : Data in a set. Like ENUM.
+	Binary : Data can take one of two values like 0 or 1.
+	
+This taxonomy of types of data is helpful to determine type of visual display and in data analysis. In Python it helps improve computational performance. This can also help to optimize indexing and storage in DB.
+
+Rectangular Data : Like a 2D Matrix with row indicating record and column indicating feature.
+	Terminology - 	
+		Data frame
+		Feature - A column in the table is commonly referred to as a feature. Also known as attribute, variable.
+		Outcome - yes/no.
+		Records - Row in a table.
+		
+Data frames and indexes
+In Python, with the pandas library, the basic rectangular data structure is a DataFrame object.
+
+Terminology for rectangular data can be confusing. Statisticians and data scientists use different terms for the same thing. For a statistician, predictor variables are used in a model to predict a response or dependent variable. For a data scientist, features are used to predict a target. One synonym is particularly confusing: computer scientists will use the term sample for a single row; a sample to a statistician means a collection of rows.
+	
+There are other data structures besides rectangular. Like Spatial data structures - used in mapping and location analytics. Graph DS for relationships.
+
+Rectangular data forms the fundamental building block of predictive modeling. In Python - http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe

@@ -94,3 +94,24 @@ Let's take an example - when a Node application gets a request to read a file it
 There’s a fantastic video on how callbacks and the event loop work in JavaScript : https://www.youtube.com/watch?v=8aGhZQkoFbQ
 	
 The HTTP Module
+It's the main module on which Express is built on. This module helps build a web server. 
+In Node, we can use http.createServer To this we pass a request handler function. This function takes two params - request and response object.
+
+http = require('http')
+function requestHandler(request, response){
+	log(request.url)
+	response.send('Hi')
+}
+http.createServer(requestHandler)
+server.listen(3000)
+
+The http module lets you build websites with Node.
+With Node we can have just one handler to manage all different requests. Express helps to clean up things.
+
+The four main features of Express:
+	Middleware for letting a request flow through multiple headers
+	Routing for handling a request at a specific spot
+	Convenience methods and properties
+	Views for dynamically rendering HTML
+	
+The API exposed by the http module is pretty minimal and doesn’t do a lot of heavy lifting for you. Express is an abstraction layer on top of Node’s built-in HTTP server.
