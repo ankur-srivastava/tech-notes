@@ -3,3 +3,20 @@ https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0002-i
 
 Machine Learning Resources
 https://docs.google.com/document/d/19eL5rLtaHgl5L_bHMO7pteL5y4EVPStbDiqBrnwG228/edit
+
+Python Resources:
+
+Python Practice Book is a book of Python exercises to help you learn the basic language syntax : https://anandology.com/python-practice-book/index.html
+
+A Python Crash Course : https://www.grahamwheeler.com/posts/python-crash-course.html and https://www.grahamwheeler.com/posts/basic-machine-learning.html
+
+“A Byte of Python” is a beginner’s tutorial for the Python language https://python.swaroopch.com/
+
+Google has a great compilation of material you should read and learn from if you want to be a professional programmer. These resources are useful not only for Python beginners but for any developer who wants to have a strong professional career in software. 
+techdevguide.withgoogle.com
+
+Looking for ideas about what projects to use to learn to code? Check out the five programming projects for Python beginners at knightlab.northwestern.edu 
+
+There’s a Udacity course by one of the creators of Reddit that shows how to use Python to build a blog. It’s a great introduction to web development concepts mena.udacity.com             
+	
+There are many thousands of Python packages available, often giving you many choices for similar purposes. One way to find quality packages is to look the curated lists at https://python.libhunt.com/ and https://awesome-python.com/
