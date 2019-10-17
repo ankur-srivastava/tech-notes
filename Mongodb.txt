@@ -1,0 +1,66 @@
+MongoDB
+
+To Install-
+
+brew install mongodb-community@4.2
+
+To start
+
+brew services start mongodb-community@4.2
+
+
+Next 
+
+sudo mongod
+
+sudo mongo
+
+connecting to: mongodb://127.0.0.1:27017
+>
+
+To create a new Database
+
+>show dbs
+>use profileapp
+
+This will create a new database profileapp
+
+>db
+
+Let's now create a collection, same as tables in DB
+
+>db.createCollection('appusers');
+
+>show collections
+
+Insert a document
+
+>db.appusers.insert({first_name: "Ankur", last_name: "Srivastava"});
+
+To check documents
+
+>db.appusers.find();
+
+To insert multiple docs we can add array
+
+>db.appusers.insert( [ { }, { } ] );
+
+>db.appusers.find().pretty();
+
+The JSON we give is flexible. We can add more fields in there.
+
+To Update
+
+>db.appusers.update({first_name: "Ankur"}, {first_name: "Ankur", last_name: "S", gender: "male"});
+This replaces existing data with new one.
+
+To do selective update we can use SET operator.
+
+>db.appusers.update({first_name: "Ankur"}, {$set: {gender:"m"}});
+
+Like $set we also have $inc .. this can be used to increment a number like age etc.
+We also have $unset to remove a field.
+
+ db.appusers.update({first_name:"Ankur"}, {$unset: {gender: "m"}});
+ 
+ If during update a record is not found then we can specify a 3rd param to insert it. We can use upsert
